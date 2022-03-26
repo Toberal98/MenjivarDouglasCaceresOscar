@@ -2,30 +2,17 @@
 
 @section('content')
 
-<!-- <div class="container"> 
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-        <div class="card">
-        <img src="https://flyclipart.com/thumb2/user-icon-png-pnglogocom-133466.png" class="card-img-top" alt="..." height="50px" width="50px">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        </div>
-        </div>
-    </div>
 
-</div> -->
-
-
-
-<div class="container">
+<div class="container ">
     <div class="row justify-content-center invento">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
-
+                <center>
+                <div class="justify-content-center">
+                    <img src="http://cdn.onlinewebfonts.com/svg/img_568657.png"   alt="..." height="100" width="100">
+               </div>
+                </center>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
