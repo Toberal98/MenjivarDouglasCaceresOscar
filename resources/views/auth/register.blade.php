@@ -60,6 +60,46 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+                        
+                        <div class="row mb-3">
+                            <label for="pais" class="col-md-4 col-form-label text-md-end">{{ __('Pais') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="pais" type="pais" class="form-control @error('pais') is-invalid @enderror" name="pais" required autocomplete="new-pais">
+
+                                @error('pais')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="edad" class="col-md-4 col-form-label text-md-end">{{ __('edad') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="edad" type="edad" class="form-control @error('edad') is-invalid @enderror" name="edad" required autocomplete="new-edad">
+
+                                @error('edad')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="comentarios" class="col-md-4 col-form-label text-md-end">{{ __('comentarios') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="comentarios" type="comentarios" class="form-control @error('comentarios') is-invalid @enderror" name="comentarios" required autocomplete="new-comentarios">
+
+                                @error('comentarios')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
