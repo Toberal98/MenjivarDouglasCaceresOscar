@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(SucursalSeeder::class);
         $this->call(AreaSeeder::class);
         $this->call(EmpleadoSeeder::class);
+        $this->call(PaisSeeder::class);
 
     }
 }
