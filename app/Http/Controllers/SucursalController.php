@@ -15,6 +15,27 @@ class SucursalController extends Controller
     public function index()
     {
         //
+        $sucursales = [
+            [
+                'nombre' =>  'san portillo',
+                'direccion' => 'colonia san portillo'
+            ],
+            [
+                'nombre' =>  'san bernardo',
+                'direccion' => 'colonia san bernardo'
+            ],
+            [
+                'nombre' =>  'san arnulfo',
+                'direccion' => 'colonia san arnulfo'
+            ],
+            [
+                'nombre' =>  'san sebastian',
+                'direccion' => 'colonia san sebastian'
+            ],
+        ];
+
+        return view("./sucursales/index",compact('sucursales'));
+
     }
 
     /**

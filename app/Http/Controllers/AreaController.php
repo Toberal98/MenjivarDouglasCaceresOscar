@@ -15,6 +15,31 @@ class AreaController extends Controller
     public function index()
     {
         //
+        $areas = [
+            [
+                'nombre' =>  'san portillo',
+                'telefono' => '7777-7777',
+                'codigoSucursal' => 1
+            ],
+            [
+                'nombre' =>  'san portillo',
+                'telefono' => '7777-7777',
+                'codigoSucursal' => 2
+            ],
+            [
+                'nombre' =>  'san portillo',
+                'telefono' => '7777-7777',
+                'codigoSucursal' => 3
+            ],
+            [
+                'nombre' =>  'san portillo',
+                'telefono' => '7777-7777',
+                'codigoSucursal' => 4
+            ],
+        ];
+
+        return view("./areas/index",compact('areas'));
+
     }
 
     /**

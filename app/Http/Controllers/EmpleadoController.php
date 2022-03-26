@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Empleado;
 use Illuminate\Http\Request;
 
 class EmpleadoController extends Controller
@@ -15,16 +14,35 @@ class EmpleadoController extends Controller
     public function index()
     {
         //
-    }
+        $empleados = [
+            [
+                'nombre' =>  'Oscar caceres',
+                'edad' => '7777-7777',
+                'sueldoBase' => 350,
+                'codigoArea' => 1,
+            ],
+            [
+                'nombre' =>  'Douglas criterio',
+                'edad' => '7777-7777',
+                'sueldoBase' => 500,
+                'codigoArea' => 2,
+            ],
+            [
+                'nombre' =>  'san portillo',
+                'edad' => '7777-7777',
+                'sueldoBase' => 700,
+                'codigoArea' => 3,
+            ],
+            [
+                'nombre' =>  'san portillo',
+                'edad' => '7777-7777',
+                'sueldoBase' => 1100,
+                'codigoArea' => 4,
+            ]
+        ];
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return view("./empleados/index",compact('empleados'));
+
     }
 
     /**
@@ -41,21 +59,10 @@ class EmpleadoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Empleado  $empleado
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Empleado $empleado)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Empleado  $empleado
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Empleado $empleado)
+    public function show($id)
     {
         //
     }
@@ -64,10 +71,10 @@ class EmpleadoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Empleado  $empleado
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Empleado $empleado)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +82,10 @@ class EmpleadoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Empleado  $empleado
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Empleado $empleado)
+    public function destroy($id)
     {
         //
     }
