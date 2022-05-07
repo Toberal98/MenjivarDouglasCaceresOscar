@@ -14,8 +14,8 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
-    
+        $producto = Producto::all();
+        return view('productos.index', compact('producto'));
     }
 
     /**
@@ -25,7 +25,7 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+        return view('productos.create');
     }
 
     /**
@@ -36,7 +36,16 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $producto = new Producto();
+
+        $producto->nombre = $request->nombre;
+        $producto->descripcion = $request->descripcion;
+        $producto->precio_unitario = $request->precio_unitario;
+        $producto->existencias = $request->existencias;
+        $producto->garantia = $request->garantia;
+        $producto->id_vendedor = $request->id_vendedor;
+
+        $producto->save();
     }
 
     /**
@@ -47,7 +56,7 @@ class ProductoController extends Controller
      */
     public function show(Producto $producto)
     {
-        //
+        return view('productos.only');
     }
 
     /**
@@ -58,7 +67,7 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //
+        return view('productos.update');
     }
 
     /**
