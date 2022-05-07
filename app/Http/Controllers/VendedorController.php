@@ -15,6 +15,7 @@ class VendedorController extends Controller
     public function index()
     {
         //
+        return view('vendedores.index');
     }
 
     /**
@@ -25,6 +26,8 @@ class VendedorController extends Controller
     public function create()
     {
         //
+        return view('vendedores.create');
+
     }
 
     /**
@@ -47,6 +50,8 @@ class VendedorController extends Controller
     public function show(Vendedor $vendedor)
     {
         //
+        return view('vendedores.only');
+
     }
 
     /**
@@ -58,6 +63,9 @@ class VendedorController extends Controller
     public function edit(Vendedor $vendedor)
     {
         //
+
+        return view('vendedores.update');
+
     }
 
     /**
