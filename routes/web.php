@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\VendedorController;
+use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,3 +34,10 @@ Route::controller(VendedorController::class)->group(function(){
     Route::get('vendedores/only/{id}','show');
 });
 
+
+Route::controller(ProductoController::class)->group(function(){
+    Route::get('producto','index');
+    Route::get('producto/create','create');
+    Route::get('producto/update','edit');
+    Route::get('producto/only/{id}','show');
+});
