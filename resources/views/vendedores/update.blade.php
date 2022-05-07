@@ -4,6 +4,7 @@
 
 <div class="container">
     <h1>Editar vendedor</h1>
+    <a href="/vendedores" class="btn btn-primary">Volver</a>
 
     <div class="row">
         

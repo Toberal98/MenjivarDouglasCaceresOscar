@@ -58,18 +58,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/empleados"
+                                    <a class="dropdown-item" href="/vendedores"
                                     >
-                                                      Empleados
+                                                      Vendedores
                                                     </a>
-                                                    <a class="dropdown-item" href="/sucursales"
-                                                    >
-                                                                      Sucursales
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="/areas"
-                                                                    >
-                                                                                      Areas
-                                                                                    </a>
+                                                 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

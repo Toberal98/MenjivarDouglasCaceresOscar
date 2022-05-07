@@ -15,7 +15,8 @@ class VendedorController extends Controller
     public function index()
     {
         //
-        return view('vendedores.index');
+        $vendedores = auth()->user()->vendedores;
+        return view('vendedores.index', compact('vendedores'));
     }
 
     /**
@@ -39,6 +40,14 @@ class VendedorController extends Controller
     public function store(Request $request)
     {
         //
+        $vendedor = new Vendedor;
+
+        $vendedor->dui = $request->dui;
+        $vendedor->nit = $request->nit;
+        $vendedor->direccion = $request->direccion;
+        $vendedor->save();
+
+        return view('vendedores.index');
     }
 
     /**
