@@ -36,7 +36,16 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $producto = new Producto();
+
+        $producto->nombre = $request->nombre;
+        $producto->descripcion = $request->descripcion;
+        $producto->precio_unitario = $request->precio_unitario;
+        $producto->existencias = $request->existencias;
+        $producto->garantia = $request->garantia;
+        $producto->id_vendedor = $request->id_vendedor;
+
+        $producto->save();
     }
 
     /**
